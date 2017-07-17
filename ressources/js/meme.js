@@ -103,3 +103,19 @@ function downloadCanvas(link, canvasId) {
 document.getElementById('download').addEventListener('click', function () {
     downloadCanvas(this, 'memecanvas');
 }, false);
+
+
+function previewFile() {
+    var file = document.querySelector('input[type=file]').files[0]; //sames as here
+    var reader = new FileReader();
+
+    reader.onloadend = function () {
+        img.src = reader.result;
+    }
+
+    if (file) {
+        reader.readAsDataURL(file); //reads the data as a URL
+    } else {
+        img.src = "";
+    }
+}
