@@ -1,6 +1,6 @@
-module.exports = function(app, urlApi) {
+module.exports = function (app, listImg) {
 
 	//FRONT
-	require("./home")(app, urlApi);
+    require("./home")(app, listImg);
 	
 };

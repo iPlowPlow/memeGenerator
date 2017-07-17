@@ -91,3 +91,6 @@ function wrapText(context, text, x, y, maxWidth, lineHeight, fromBottom) {
 
 }
 
+function switchImg(myImage) {
+    img.setAttribute("src", myImage.src);
+}

@@ -1,9 +1,15 @@
 
 
-img {
+#start-image {
     left: -10000px;
     top: -10000px;
     position: absolute;
+}
+
+#little-image {
+    width : 100px;
+    height : 100px;
+
 }
 
 input {

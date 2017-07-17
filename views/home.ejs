@@ -22,11 +22,20 @@
 					Sorry, canvas not supported
 				</canvas>
 
-				<img id="start-image" src="http://weknowmemes.com/wp-content/uploads/2011/10/great-scott-doc-back-to-the-future-drawing.jpg" alt="" />
+				<img id="start-image" src="/images/img1.png" alt="" />
 
 				<input type='text' value='omg' id='top-text' />
 				<input type='text' value='this is totally amazingg' id='bottom-text' />
                 <br>
+				<% 
+				if(files){
+					for (var i = 0 ; i<files.length; i++){ 
+				%>
+					<img id = "little-image" src = "/images/<%=files[i]%>" onClick = "switchImg(this)">
+				<%
+					}
+				}
+				%>
             </div>
             <div class="col-sm-4 hidden-xs">
                 
