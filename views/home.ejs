@@ -1,0 +1,42 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Meme Generator</title>
+    <% include ./partials/header %>
+</head>
+<body>
+
+<% include ./partials/navbar %>
+
+<div class="container">
+    <div class="col-sm-8 col-sm-offset-2 bomber-block ">
+        <h2 class="bomber-text">Meme Generator</h2>
+        <hr class = "bomber-line" >
+
+        <div class="row">
+            <div class="col-sm-8">
+                <p class="bomber-text">Génere ton Meme !</p>
+                <br>
+                <canvas id="memecanvas">
+					Sorry, canvas not supported
+				</canvas>
+
+				<img id="start-image" src="http://weknowmemes.com/wp-content/uploads/2011/10/great-scott-doc-back-to-the-future-drawing.jpg" alt="" />
+
+				<input type='text' value='omg' id='top-text' />
+				<input type='text' value='this is totally amazingg' id='bottom-text' />
+                <br>
+            </div>
+            <div class="col-sm-4 hidden-xs">
+                
+            </div>
+        </div>
+    </div>
+   
+</div>
+<script src="/js/meme.js"></script>
+<% include ./partials/footer %>
+
+</body>
+</html>
