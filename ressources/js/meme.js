@@ -3,8 +3,17 @@ var memeSize = 300;
 
 var canvas = document.getElementById('memecanvas');
 ctx = canvas.getContext('2d');
+var police = "Verdana";
 
-
+/*
+Verdana
+Times
+Courier New
+FreeMono
+Comic Sans MS
+Brush Script
+Impact
+*/
 // Set the text style to that to which we are accustomed
 
 
@@ -36,7 +45,7 @@ function drawMeme() {
     ctx.drawImage(img, 0, 0, memeSize, memeSize);
 
     ctx.lineWidth = 4;
-    ctx.font = '20pt sans-serif';
+    ctx.font = '20pt '+police;
     ctx.strokeStyle = 'black';
     ctx.fillStyle = 'white';
     ctx.textAlign = 'center';
@@ -118,4 +127,9 @@ function previewFile() {
     } else {
         img.src = "";
     }
+}
+
+function changePolice(newPolice) {
+    police = newPolice.value;
+    drawMeme();
 }

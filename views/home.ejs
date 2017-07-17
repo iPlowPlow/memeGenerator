@@ -22,11 +22,20 @@
 					Sorry, canvas not supported
 				</canvas>
 
-				<img id="start-image" src="/images/img1.png" alt="" />
+				<img id="start-image" src="/images/img4.jpg" alt="" />
 
-				<input type='text' value='omg' id='top-text' />
-				<input type='text' value='this is totally amazingg' id='bottom-text' />
-     
+				<input type="text" value="Le génie logiciel" id="top-text" />
+				<input type="text" value="c'est vraiment tres chouette" id="bottom-text" />
+				<p>Police : <select id = "police-text" onClick = "changePolice(this)">
+				<%
+					var tablePolice = ["Verdana","Times","Courier New","FreeMono","Comic Sans MS","Brush Script","Impact"]
+					for(var j = 0; j<tablePolice.length ; j++){
+				%>	
+					<option id = "police-text" value = "<%=tablePolice[j]%>"><%=tablePolice[j]%></option>
+				<%
+					}
+				%>
+				</select></p>
 				<a id="download">Télécharger</a>
 				<br>
 				<br>
