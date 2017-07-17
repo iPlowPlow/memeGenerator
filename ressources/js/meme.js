@@ -94,3 +94,12 @@ function wrapText(context, text, x, y, maxWidth, lineHeight, fromBottom) {
 function switchImg(myImage) {
     img.setAttribute("src", myImage.src);
 }
+
+function downloadCanvas(link, canvasId) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = "meme.png";
+}
+
+document.getElementById('download').addEventListener('click', function () {
+    downloadCanvas(this, 'memecanvas');
+}, false);
